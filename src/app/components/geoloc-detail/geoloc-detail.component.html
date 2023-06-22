@@ -1,0 +1,10 @@
+<p>geoloc-detail works!</p>
+
+<ul>
+    <li *ngIf="location">
+        <h3>{{location.location_name}}</h3>
+        <h3>{{location.region}}</h3>
+        <button routerLink="/edit">Edit</button>
+        <button routerLink="/">Delete</button>
+    </li>
+</ul>

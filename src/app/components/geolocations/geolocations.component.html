@@ -1,0 +1,12 @@
+<p>geolocations works!</p>
+
+<button routerLink="/new">+</button>
+
+<ul *ngIf="locationList">
+    <li *ngFor="let location of locationList">
+        <h2>{{location.location_name}}</h2>
+        <h2>{{location.country}}</h2>
+        <a routerLink="/{{location.id}}">More info</a>
+
+    </li>
+</ul>
