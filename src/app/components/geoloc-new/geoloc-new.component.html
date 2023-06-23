@@ -1,6 +1,6 @@
 <p>geoloc-new works!</p>
 
-<form [formGroup]="geolocForm" (ngSubmit)="addGeoLoc()">
+<form [formGroup]="geolocForm" (ngSubmit)="submitGeoLoc()">
     <input type="text" placeholder="location name" formControlName="location_name">
     <input type="text" placeholder="region" formControlName="region">
     <input type="text" placeholder="country" formControlName="country">

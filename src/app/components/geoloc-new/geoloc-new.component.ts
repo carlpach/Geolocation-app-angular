@@ -34,7 +34,7 @@ export class GeolocNewComponent {
     })
   }
 
-  public addGeoLoc() {
+  public submitGeoLoc() {
       this.submitted = true;
       if (this.geolocForm.valid) {
         console.log("geoloc ------------", this.geoloc);

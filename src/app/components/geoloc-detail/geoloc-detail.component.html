@@ -2,9 +2,11 @@
 
 <ul>
     <li *ngIf="location">
+        <img src="{{location.image ? location.image : placeholderImg}}"/>
         <h3>{{location.location_name}}</h3>
-        <h3>{{location.region}}</h3>
-        <button routerLink="/edit">Edit</button>
-        <button routerLink="/">Delete</button>
+        <h4>{{location.region}}</h4>
+        <h4>{{location.country}}</h4>
+        <button (click)="editLocation()">Edit</button>
+        <button (click)="deleteLocation()">Delete</button>
     </li>
 </ul>

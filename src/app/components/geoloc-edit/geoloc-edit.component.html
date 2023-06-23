@@ -1,1 +1,15 @@
 <p>geoloc-edit works!</p>
+
+<div class="b-edit">
+    <img src={{geoloc.image}}>
+
+    <form [formGroup]="geolocForm" (ngSubmit)="sumbitGeoloc()">
+        <input type="file" placeholder="image" formControlName="image">
+        <input type="text" placeholder="location name" formControlName="location_name">
+        <input type="text" placeholder="region" formControlName="region">
+        <input type="text" placeholder="country" formControlName="country">
+
+        <button>Save</button>
+
+    </form>    
+</div>

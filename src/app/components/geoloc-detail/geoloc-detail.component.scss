@@ -4,8 +4,10 @@
 
 img {
     width: 50%;
-    height: 200px;
-    object-fit: cover;
+}
+
+li {
+    margin: 120px 40px;
 }
 
 button {
@@ -13,7 +15,7 @@ button {
     background-color: rgb(150, 150, 150);
     color: white;
     padding: 5px 10px;
-    margin: 0 5px 0 20px;
+    margin: 20px 5px 0 0px;
     border-radius: 10px;
     font-size: 15px;
 }

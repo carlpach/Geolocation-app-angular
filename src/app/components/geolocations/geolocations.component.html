@@ -4,6 +4,7 @@
 
 <ul *ngIf="locationList">
     <li *ngFor="let location of locationList">
+        <img src="{{location.image ? location.image : placeholderImg}}" />
         <h2>{{location.location_name}}</h2>
         <h2>{{location.country}}</h2>
         <a routerLink="/{{location.id}}">More info</a>

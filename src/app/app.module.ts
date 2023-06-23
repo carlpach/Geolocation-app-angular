@@ -12,6 +12,7 @@ import { GeolocDetailComponent } from './components/geoloc-detail/geoloc-detail.
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { GeolocEditComponent } from './components/geoloc-edit/geoloc-edit.component';
 import { GeolocNewComponent } from './components/geoloc-new/geoloc-new.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { GeolocNewComponent } from './components/geoloc-new/geoloc-new.component
     GeolocDetailComponent,
     NavbarComponent,
     GeolocEditComponent,
-    GeolocNewComponent
+    GeolocNewComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

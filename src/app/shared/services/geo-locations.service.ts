@@ -7,7 +7,9 @@ import { LocationsI } from "../../models/location.model";
 })
 export class GeoLocationsService {
   base_url: string = "http://localhost:3000/locations"
-  locations!: LocationsI;
+  geolocId!: number;
+  geoloc!: LocationsI;
+  public placeholderImg: string =  "https://uning.es/wp-content/uploads/2016/08/ef3-placeholder-image.jpg";
 
   constructor(private http: HttpClient) { 
     
@@ -18,11 +20,33 @@ export class GeoLocationsService {
   }   
 
   getLocationsByID(id: number){
-    return this.http.get(`http://localhost:3000/locations/${id}`);
+    return this.http.get(`${this.base_url}/${id}`);
+  }
+
+  setLocation(location: LocationsI, id: number){
+    this.geoloc = location;
+    this.geolocId = id;
+  }
+
+  getDetailGeoloc() {
+    return this.geoloc;
   }
 
   postGeoloc(geoloc: LocationsI) {
     return this.http.post(this.base_url, geoloc);
   }
+
+  putGeoloc(updatedGeoloc: LocationsI) {
+    console.log("id --------->", this.geolocId);
+    console.log("geoloc --------->", this.geoloc);
+    
+    return this.http.put(`${this.base_url}/${this.geolocId}`, updatedGeoloc);
+  }
+
+  deleteGeoloc() {
+
+    return this.http.delete(`${this.base_url}/${this.geolocId}`);
+  }
+
 
 }
