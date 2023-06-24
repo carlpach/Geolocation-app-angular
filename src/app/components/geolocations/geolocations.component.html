@@ -2,11 +2,18 @@
 
 <button routerLink="/new">+</button>
 
-<ul *ngIf="locationList">
-    <li *ngFor="let location of locationList">
-        <img src="{{location.image ? location.image : placeholderImg}}" />
+<div>
+    <input type="text" placeholder="Search location" (keyup)="onChange($event)">
+</div>
+
+<button (click)="onClickList()">list</button>
+<button (click)="onClickList()">table</button>
+
+<ul [ngClass]="{'b-list': isList}" *ngIf="locationList">
+    <li [ngClass]="{'b-list__li': isList}" *ngFor="let location of (filteredLocationList.length? filteredLocationList : locationList)">
+        <img [ngClass]="{'b-list__img': isList}" src="{{location.image ? location.image : placeholderImg}}" />
         <h2>{{location.location_name}}</h2>
-        <h2>{{location.country}}</h2>
+        <h3>{{location.country}}</h3>
         <a routerLink="/{{location.id}}">More info</a>
 
     </li>

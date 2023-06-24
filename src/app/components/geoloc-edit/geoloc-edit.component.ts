@@ -26,11 +26,11 @@ export class GeolocEditComponent {
 
   ngOnInit(): void {
     this.geolocForm = this.formBuilder.group({
-      location_name: ["", [Validators.required]],
-      region: ["", []],
-      country: ["", [Validators.required]],
+      image: [this.geoloc.image!, []],
+      location_name: [this.geoloc.location_name, [Validators.required]],
+      region: [this.geoloc.region, []],
+      country: [this.geoloc.country, [Validators.required]],
       geolocation: ["", []],
-      image: ["", []]
 
     })
 
@@ -51,7 +51,7 @@ export class GeolocEditComponent {
           console.log("returned data from put -----------", data);
           this.geolocForm.reset();
           this.submitted = false;
-          this.router.navigate(["/"]);
+          this.router.navigate([`/${this.geoLocApi.geolocId}`]);
           
         })
       }

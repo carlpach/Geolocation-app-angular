@@ -11,7 +11,9 @@ export class GeolocationsComponent {
   public locationList!: LocationsI[];
   public base_url: string = "http://localhost:3000/"
   public placeholderImg!: string;
-
+  filteredLocationList: LocationsI[] = [];
+  isList: boolean = false;
+  
   constructor(private api: GeoLocationsService) {
     
   }
@@ -26,5 +28,21 @@ export class GeolocationsComponent {
       
     });
 
+  }
+
+  // filter locations by list
+  onChange(event: any) {
+    console.log(event.target.value);
+    
+    this.filteredLocationList = this.locationList.filter((item) => {
+      return item.location_name.includes(event.key);
+    })
+    console.log(this.filteredLocationList);
+    
+  }
+
+  onClickList() {
+    this.isList = !this.isList;
+    console.log(this.isList);
   }
 }
