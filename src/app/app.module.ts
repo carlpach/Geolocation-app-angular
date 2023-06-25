@@ -20,6 +20,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import { GoogleMapsModule } from '@angular/google-maps';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { DialogComponent } from './shared/dialog/dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
  
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     NavbarComponent,
     GeolocEditComponent,
     GeolocNewComponent,
-    FooterComponent
+    FooterComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatSelectModule,
     MatIconModule,
     GoogleMapsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

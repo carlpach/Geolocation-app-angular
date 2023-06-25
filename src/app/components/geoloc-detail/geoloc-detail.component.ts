@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { GeoLocationsService } from '../../shared/services/geo-locations.service';
 import { LocationsI } from "../../models/location.model";
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {MatDialog, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
+import { DialogComponent } from '../../shared/dialog/dialog.component';
 
 @Component({
   selector: 'app-geoloc-detail',
@@ -14,7 +16,7 @@ export class GeolocDetailComponent {
   public location!: LocationsI;
   public placeholderImg!: string;
 
-  constructor(private geoLocApi: GeoLocationsService, private activatedRoute: ActivatedRoute, private router: Router, private _snackBar: MatSnackBar ) {}
+  constructor(private geoLocApi: GeoLocationsService, private activatedRoute: ActivatedRoute, private router: Router, private _snackBar: MatSnackBar, public dialog: MatDialog ) {}
 
   ngOnInit(): void {
 
@@ -28,21 +30,27 @@ export class GeolocDetailComponent {
     // 2nd, get location data with method GET by id
     this.geoLocApi.getLocationsByID(this.id).subscribe((data: any) => {
       this.location = data;
-      console.log("get data by id ---------", data);
-      
+      console.log("get data by id ---------", data);     
     })
-
   }
 
   editLocation() {
     this.geoLocApi.setLocation(this.location, this.id);
     this.router.navigate(["edit"]);
+  }
 
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogComponent, {
+    });
+
+    dialogRef.afterClosed().subscribe(() => {
+      this.deleteLocation();
+    });
   }
 
   deleteLocation() {
     this.geoLocApi.setLocation(this.location, this.id);
-    this.geoLocApi.deleteGeoloc().subscribe((data: any) => {
+    this.geoLocApi.deleteGeoloc().subscribe(() => {
         this._snackBar.open("Location deleted", "Close", {
           duration: 2000
         })
