@@ -55,14 +55,14 @@ export class GeolocNewComponent {
     console.log("newPlace --------", this.newPlace);
     console.log("photo --------", this.newPlace.photos[0].getUrl());
     this.map.googleMap!.setCenter(this.newPlace.geometry.location);
-    this.map.googleMap!.setZoom(13);
+    this.map.googleMap!.setZoom(15);
     console.log(this.newPlace.geometry.location);
     this.geoloc = {   
           id: NaN,    
           image: this.newPlace.photos[0].getUrl(),
           location_name: this.newPlace.name,
           region: this.newPlace.address_components[1].long_name,
-          country: this.newPlace.address_components[3].long_name,
+          country: this.newPlace.address_components[this.newPlace.address_components.length - 1].long_name,
           position: this.newPlace.geometry.location
         }
     console.log("geoloc --------", this.geoloc);

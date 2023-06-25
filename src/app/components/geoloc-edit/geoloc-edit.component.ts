@@ -30,7 +30,7 @@ export class GeolocEditComponent {
       location_name: [this.geoloc.location_name, [Validators.required]],
       region: [this.geoloc.region, []],
       country: [this.geoloc.country, [Validators.required]],
-      geolocation: ["", []],
+      position: [this.geoloc.position, []],
 
     })
 
