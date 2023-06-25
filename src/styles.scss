@@ -41,7 +41,8 @@ $Geolocation-app-angular-theme: mat.define-light-theme((
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+    box-sizing: border-box;
+  }
 
 
 body {
@@ -49,3 +50,46 @@ body {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.b-iconRound {
+    background-color: #bedf2e;
+    color: rgb(84, 84, 94);
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50%;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0px 15px 20px rgba(50, 51, 49, 0.4);
+
+  &--add {
+    color: white;
+    transform: scale(1.5);
+}
+
+  &--white {
+      color: rgb(255, 255, 255);
+  }
+
+  &:hover {
+      background-color: #bedf2e;
+      box-shadow: 0px 15px 20px rgba(115, 153, 11, 0.4);
+      color: #fff;
+      transform: scale(1.1);
+  }
+}
+
+.b-iconAux {
+  color: grey;
+  transform: scale(1.45);
+  border: none;
+  background-color: 0;
+  
+  &:hover {
+    color: #b4b4b4;
+  }
+  &--red {
+    color: rgb(231, 77, 77);
+  }
+
+}

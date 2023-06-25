@@ -1,12 +1,13 @@
-<p>geoloc-detail works!</p>
 
 <ul>
     <li *ngIf="location">
         <img src="{{location.image ? location.image : placeholderImg}}"/>
         <h3>{{location.location_name}}</h3>
-        <h4>{{location.region}}</h4>
-        <h4>{{location.country}}</h4>
-        <button (click)="editLocation()">Edit</button>
-        <button (click)="deleteLocation()">Delete</button>
+        <h4>{{location.region}}, {{location.country}}</h4>
+        <div class="b-ul__icons">
+            <mat-icon class="b-iconAux" (click)="editLocation()" aria-hidden="false" aria-label="add place icon" fontIcon="edit"></mat-icon>
+            <mat-icon class="b-iconAux b-iconAux--red" (click)="deleteLocation()" aria-hidden="false" aria-label="add place icon" fontIcon="delete"></mat-icon>   
+        </div>
+
     </li>
 </ul>

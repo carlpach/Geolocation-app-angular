@@ -15,7 +15,7 @@ export class GeolocationsComponent {
   public placeholderImg!: string;
   filteredLocationList: LocationsI[] = [];
   isList: boolean = false;
-  selectedType: string = "None";
+  selectedType: string = "location_name";
   public mapBounds = new google.maps.LatLngBounds();
   @ViewChild(GoogleMap) map!: GoogleMap;
 
@@ -62,7 +62,8 @@ export class GeolocationsComponent {
 
   onChange(event: any) {
     // Filter locations in the locations list
-    console.log(event.target.value);
+    console.log("event target search bar ------", event.target.value);
+    console.log("event target search bar ------", event.target.value);
 
     this.filteredLocationList = this.locationList.filter((item) => {
       return item[this.selectedType].toLowerCase().includes(event.target.value.toLowerCase());

@@ -1,15 +1,8 @@
-<p>geolocations works!</p>
-
-<button class="b-icon" routerLink="/new">
-    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add_location_alt"></mat-icon>
-</button>
 
 <div class="b-filters">
-    <div>
-        <input type="text" placeholder="Search location" (keyup)="onChange($event)">
-    </div>
-
-    <div>
+    <div class="b-flex">
+        <input class="b-searchBar" type="text" placeholder="Search saved place" (keyup)="onChange($event)">
+        
         <mat-form-field>
             <mat-label>Search by</mat-label>
             <mat-select [(value)]="selectedType" >
@@ -18,25 +11,37 @@
             </mat-option>
             </mat-select>
         </mat-form-field>
-        <button (click)="onClickList()">list</button>
-        <button (click)="onClickList()">table</button>    
+
+        <button class="b-iconRound" routerLink="/new">
+            <mat-icon class="b-iconRound--add" aria-hidden="false" aria-label="add place icon" fontIcon="add_location_alt"></mat-icon>
+        </button>
+        
+    </div>
+
+    <div class="b-flex">
+        <mat-icon class="b-iconAux" (click)="onClickList()" aria-hidden="false" aria-label="grid icon" fontIcon="grid_on"></mat-icon>
+        <mat-icon class="b-iconAux" (click)="onClickList()" aria-hidden="false" aria-label="list icon" fontIcon="list"></mat-icon>
+
     </div>
 </div>
 
-<div class="my-google-map">
-    <google-map [width]="700" [height]="300" class="b-map" [options]="mapOptions">
-        <map-marker *ngFor="let locat of locationList"
-                [position]="locat.position"></map-marker>
-    </google-map>    
+
+<div class="b-containerMap">
+
+    <ul [ngClass]="{'b-list': isList}" *ngIf="locationList">
+        <li [ngClass]="{'b-list__li': isList}" (click)="onClickItem(location)" *ngFor="let location of (filteredLocationList.length? filteredLocationList : locationList)">
+            <img [ngClass]="{'b-list__img': isList}" src="{{location.image ? location.image : placeholderImg}}" />
+            <h2>{{location.location_name}}</h2>
+            <h3>{{location.country}}</h3>
+            <a routerLink="/{{location.id}}">More info</a>
+
+        </li>
+    </ul>
+
+    <div class="my-google-map">
+        <google-map width="100%" height="100%" class="b-map" [options]="mapOptions">
+            <map-marker *ngFor="let locat of locationList"
+                    [position]="locat.position"></map-marker>
+        </google-map>    
+    </div>
 </div>
-
-
-<ul [ngClass]="{'b-list': isList}" *ngIf="locationList">
-    <li [ngClass]="{'b-list__li': isList}" (click)="onClickItem(location)" *ngFor="let location of (filteredLocationList.length? filteredLocationList : locationList)">
-        <img [ngClass]="{'b-list__img': isList}" src="{{location.image ? location.image : placeholderImg}}" />
-        <h2>{{location.location_name}}</h2>
-        <h3>{{location.country}}</h3>
-        <a routerLink="/{{location.id}}">More info</a>
-
-    </li>
-</ul>
