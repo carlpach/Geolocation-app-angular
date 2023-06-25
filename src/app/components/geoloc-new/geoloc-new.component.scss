@@ -35,7 +35,6 @@ input {
     &:hover {
         background-color: #ffffff;
         box-shadow: 0px 15px 20px rgba(48, 48, 48, 0.4);
-        color: #fff;
         transform: translateY(-1px);
     }
 }
@@ -48,6 +47,7 @@ button {
     border: none;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease 0s;
+    border-radius: 20px;
 
     &:hover {
         background-color: #2EE59D;
