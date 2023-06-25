@@ -18,8 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
-
 import { GoogleMapsModule } from '@angular/google-maps';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
  
 @NgModule({
   declarations: [
@@ -43,6 +43,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     MatSelectModule,
     MatIconModule,
     GoogleMapsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

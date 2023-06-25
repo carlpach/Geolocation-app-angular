@@ -14,4 +14,8 @@ nav {
 a {
     color: rgb(42, 43, 37);
     font-weight: 700;
+
+    &:hover {
+        color: rgb(122, 122, 122);
+    }
 }

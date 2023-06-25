@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GeoLocationsService } from '../../shared/services/geo-locations.service';
 import { LocationsI } from "../../models/location.model";
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-geoloc-detail',
@@ -13,7 +14,7 @@ export class GeolocDetailComponent {
   public location!: LocationsI;
   public placeholderImg!: string;
 
-  constructor(private geoLocApi: GeoLocationsService, private activatedRoute: ActivatedRoute, private router: Router) {}
+  constructor(private geoLocApi: GeoLocationsService, private activatedRoute: ActivatedRoute, private router: Router, private _snackBar: MatSnackBar ) {}
 
   ngOnInit(): void {
 
@@ -42,7 +43,13 @@ export class GeolocDetailComponent {
   deleteLocation() {
     this.geoLocApi.setLocation(this.location, this.id);
     this.geoLocApi.deleteGeoloc().subscribe((data: any) => {
-      this.router.navigate(["/"]);
+        this._snackBar.open("Location deleted", "Close", {
+          duration: 2000
+        })
+        setTimeout(()=>{         
+          this.router.navigate(["/"]);
+        }, 1500)
+        
     })
   }
 

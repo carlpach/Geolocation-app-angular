@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { GeoLocationsService } from '../../shared/services/geo-locations.service';
 import { LocationsI } from "../../models/location.model";
 import { GoogleMap } from '@angular/google-maps';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-geoloc-new',
@@ -19,7 +20,7 @@ export class GeolocNewComponent {
   @ViewChild(GoogleMap) map!: GoogleMap;
   newPlace!: any; // newPlace to be added
 
-  constructor(private formBuilder: FormBuilder, private geoLocApi: GeoLocationsService, private router: Router ) {}
+  constructor(private formBuilder: FormBuilder, private geoLocApi: GeoLocationsService, private router: Router, private _snackBar: MatSnackBar ) {}
 
   ngOnInit(): void {
     this.initAutocomplete();
@@ -53,13 +54,12 @@ export class GeolocNewComponent {
     // when newPlace is selected in input, center/zoom to newPlace
     this.newPlace = this.autocomplete.getPlace();
     console.log("newPlace --------", this.newPlace);
-    console.log("photo --------", this.newPlace.photos[0].getUrl());
     this.map.googleMap!.setCenter(this.newPlace.geometry.location);
     this.map.googleMap!.setZoom(15);
     console.log(this.newPlace.geometry.location);
     this.geoloc = {   
           id: NaN,    
-          image: this.newPlace.photos[0].getUrl(),
+          image: this.newPlace.photos ? this.newPlace.photos[0].getUrl() : "",
           location_name: this.newPlace.name,
           region: this.newPlace.address_components[1].long_name,
           country: this.newPlace.address_components[this.newPlace.address_components.length - 1].long_name,
@@ -74,7 +74,12 @@ export class GeolocNewComponent {
       console.log("geoloc ------------", this.geoloc);
       this.geoLocApi.postGeoloc(this.geoloc).subscribe((data: any) => {
         console.log(data);
-        this.router.navigate(["/"]);
+        this._snackBar.open("Location added", "Close", {
+          duration: 2000
+        })
+        setTimeout(()=>{         
+          this.router.navigate(["/"]);
+        }, 1500)
         
       })
       
