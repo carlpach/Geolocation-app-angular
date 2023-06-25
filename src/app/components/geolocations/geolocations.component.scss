@@ -1,28 +1,3 @@
-
-
-.b-list {
-    display: block;
-
-    &__li {
-        font-size: 10px;
-        width: 100%;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        min-height: 0;
-        margin-bottom: 15px;
-        padding: 10px;
-    }
-
-    &__img {
-        object-fit: contain;
-        width: auto;
-        height: 100%;
-    }
-}
-
-
 ul {
     display: flex;
     justify-content: space-around;
@@ -40,9 +15,13 @@ li {
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     position: relative;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: transform .3s; /* Animation */
+
+    &:hover {
+        transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
 }
-
-
 
 img {
     width: 100%;
@@ -52,7 +31,7 @@ img {
 
 
 
-button {
+.b-button {
     border: none;
     background-color: green;
     color: white;
@@ -74,4 +53,58 @@ a {
     border-radius: 5px;
     margin: 0px 0;
     font-size: 15px; 
+}
+
+
+.b-list {
+    display: block;
+
+    &__li {
+        font-size: 10px;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-height: 0;
+        margin-bottom: 15px;
+        padding: 10px;
+        transition: transform .2s; /* Animation */
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    &__img {
+        object-fit: contain;
+        width: auto;
+        height: 100%;
+    }
+}
+
+
+
+.b-filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.b-icon {
+    background-color: green;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.my-google-map {
+    width: 100%;
+    height: 300px;
+    margin: 20px;
+
+    .map-container{
+        width: 1200px;
+        height: 600px;
+      }
 }

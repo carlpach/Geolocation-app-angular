@@ -14,6 +14,13 @@ import { GeolocEditComponent } from './components/geoloc-edit/geoloc-edit.compon
 import { GeolocNewComponent } from './components/geoloc-new/geoloc-new.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatIconModule} from '@angular/material/icon';
+
+import { GoogleMapsModule } from '@angular/google-maps';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +37,12 @@ import { FooterComponent } from './shared/footer/footer.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatIconModule,
+    GoogleMapsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

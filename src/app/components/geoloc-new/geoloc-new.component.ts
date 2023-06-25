@@ -1,51 +1,82 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { GeoLocationsService } from '../../shared/services/geo-locations.service';
 import { LocationsI } from "../../models/location.model";
+import { GoogleMap } from '@angular/google-maps';
 
 @Component({
   selector: 'app-geoloc-new',
   templateUrl: './geoloc-new.component.html',
   styleUrls: ['./geoloc-new.component.scss']
 })
+
 export class GeolocNewComponent {
   geolocForm!: FormGroup;
   submitted: boolean = false;
   geoloc!: LocationsI;
+  autocomplete: any;
+  @ViewChild(GoogleMap) map!: GoogleMap;
+  newPlace!: any; // newPlace to be added
 
   constructor(private formBuilder: FormBuilder, private geoLocApi: GeoLocationsService, private router: Router ) {}
 
-
   ngOnInit(): void {
-    this.geolocForm = this.formBuilder.group({
-      location_name: ["", [Validators.required]],
-      region: ["", []],
-      country: ["", [Validators.required]],
-      geolocation: ["", []],
-      image: ["", []]
+    this.initAutocomplete();
 
-    })
+  }
 
-    this.geolocForm.valueChanges.subscribe((data) => {
-      console.log("form values changes ----------", data);
-      
-      this.geoloc = data;
-    })
+  private initAutocomplete() {
+    // get html input element
+    const input = document.getElementById("autocomplete") as HTMLInputElement;
+    console.log(input);
+    const options = {
+      fields: ["address_components", "geometry", "icon", "name", "photos"],
+      strictBounds: false,
+      types: [],
+    };
+    
+    // generate autocomplete g maps data in input html
+    this.autocomplete = new google.maps.places.Autocomplete( input, options);
+
+    // listener to the input to get the selected newPlace
+    this.autocomplete.addListener("place_changed", () => {
+      this.onPlaceChanged();
+    });
+  
+    console.log(this.autocomplete);
+    console.log(this.autocomplete.getPlace());
+    
+  }
+
+  public onPlaceChanged() {
+    // when newPlace is selected in input, center/zoom to newPlace
+    this.newPlace = this.autocomplete.getPlace();
+    console.log("newPlace --------", this.newPlace);
+    console.log("photo --------", this.newPlace.photos[0].getUrl());
+    this.map.googleMap!.setCenter(this.newPlace.geometry.location);
+    this.map.googleMap!.setZoom(13);
+    console.log(this.newPlace.geometry.location);
+    this.geoloc = {   
+          id: NaN,    
+          image: this.newPlace.photos[0].getUrl(),
+          location_name: this.newPlace.name,
+          region: this.newPlace.address_components[1].long_name,
+          country: this.newPlace.address_components[3].long_name,
+          position: this.newPlace.geometry.location
+        }
+    console.log("geoloc --------", this.geoloc);
+    
+    
   }
 
   public submitGeoLoc() {
-      this.submitted = true;
-      if (this.geolocForm.valid) {
-        console.log("geoloc ------------", this.geoloc);
+      console.log("geoloc ------------", this.geoloc);
+      this.geoLocApi.postGeoloc(this.geoloc).subscribe((data: any) => {
+        console.log(data);
+        this.router.navigate(["/"]);
         
-        this.geoLocApi.postGeoloc(this.geoloc).subscribe((data: any) => {
-          console.log(data);
-          this.geolocForm.reset();
-          this.submitted = false;
-          this.router.navigate(["/"]);
-          
-        })
-      }
+      })
+      
   }
 }

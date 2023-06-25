@@ -1,10 +1,17 @@
 <p>geoloc-new works!</p>
 
-<form [formGroup]="geolocForm" (ngSubmit)="submitGeoLoc()">
-    <input type="text" placeholder="location name" formControlName="location_name">
-    <input type="text" placeholder="region" formControlName="region">
-    <input type="text" placeholder="country" formControlName="country">
+<div class="b-new">
 
-    <button>Submit</button>
+    <input
+        id="autocomplete"
+        class="controls"
+        type="text"
+        placeholder="Search a place" />
+    <div class="b-map">
+        <google-map [width]="700" [height]="300">
+            <map-marker [position]="newPlace?.geometry.location"></map-marker>
+        </google-map>  
+    </div> 
+    <button (click)="submitGeoLoc()">Add</button>
 
-</form>
+</div>
