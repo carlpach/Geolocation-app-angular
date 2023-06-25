@@ -56,13 +56,12 @@ export class GeolocationsComponent {
     console.log(location);
     
     this.map.googleMap!.setCenter(location.position);
-    this.map.googleMap!.setZoom(8);
+    this.map.googleMap!.setZoom(13);
   
   }
 
   onChange(event: any) {
     // Filter locations in the locations list
-    console.log("event target search bar ------", event.target.value);
     console.log("event target search bar ------", event.target.value);
 
     this.filteredLocationList = this.locationList.filter((item) => {
