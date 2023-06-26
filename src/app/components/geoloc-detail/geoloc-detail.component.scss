@@ -1,0 +1,26 @@
+ul {
+    padding: 80px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+img {
+    width: 50%;
+}
+
+li {
+    margin: 120px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+.b-ul__icons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}

@@ -1,0 +1,8 @@
+<mat-dialog-content class="mat-typography">
+  <h3>Delete location?</h3>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button (click)="onNoClick()">No Thanks</button>
+    <button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+</mat-dialog-actions>

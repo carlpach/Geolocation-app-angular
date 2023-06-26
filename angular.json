@@ -17,6 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "ngx-google-places-autocomplete"
+            ],
             "outputPath": "dist/geolocation-app-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -100,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

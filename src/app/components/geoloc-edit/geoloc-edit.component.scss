@@ -1,0 +1,43 @@
+
+.b-edit {
+    padding: 120px 60px;
+}
+
+img {
+    width: 50%;
+}
+
+
+form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: red;
+    width: 100%;
+    align-items: start;
+}
+
+input {
+    width: 40%;
+    height: 30px;
+    border: 2px solid black;
+    background-color: rgb(230, 230, 230);
+}
+
+
+button {
+    font-size: 20px;
+    margin: 20px 0;
+    padding: 10px 30px;
+    border: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+        background-color: #2EE59D;
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        color: #fff;
+        transform: translateY(-7px);
+    }
+}

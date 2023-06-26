@@ -1,0 +1,63 @@
+
+.b-new {
+    padding: 120px 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+img {
+    width: 50%;
+}
+
+
+form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: red;
+    width: 100%;
+    align-items: center;
+}
+
+input {
+    height: 56px;
+    border: none;
+    background-color: rgb(247, 247, 247);
+    box-shadow: rgba(77, 77, 82, 0.2) 0px 7px 29px 0px;
+    padding: 0px 10px;
+    font-size: 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+        background-color: #ffffff;
+        box-shadow: 0px 15px 20px rgba(48, 48, 48, 0.4);
+        transform: translateY(-1px);
+    }
+}
+
+
+button {
+    font-size: 20px;
+    margin: 20px 0;
+    padding: 10px 30px;
+    border: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    border-radius: 20px;
+
+    &:hover {
+        background-color: #2EE59D;
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        color: #fff;
+        transform: translateY(-7px);
+    }
+}
+
+.b-map {
+    box-shadow: 0px 15px 20px rgba(63, 63, 63, 0.4);
+
+}

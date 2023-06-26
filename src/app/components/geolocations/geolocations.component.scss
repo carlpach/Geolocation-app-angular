@@ -1,0 +1,140 @@
+
+.b-containerMap {
+    display: flex;
+}
+
+.my-google-map {
+    width: 50%;
+    height: 1000PX;
+
+    .map-container{
+        width: 100%;
+        height: 100%;
+      }
+}
+
+
+ul {
+    width: 50%;
+    max-height: 1000px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 5px 20px;
+    overflow: auto;
+    box-shadow: rgba(0, 0, 0, 0.822) 10px 10px 20px -10px;
+    z-index: 1;
+
+
+}
+
+li {
+    width: calc(33% - 20px);
+    min-width: 250px;
+    height: 250px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(61, 61, 61);
+    border-radius: 10px;
+    position: relative;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: transform .3s; /* Animation */
+
+    &:hover {
+        transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.b-button {
+    border: none;
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 20px;
+}
+
+a {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    border: none;
+    background-color: rgb(202, 202, 202);
+    color: white;
+    padding: 3px 7px;
+    border-radius: 5px;
+    margin: 0px 0;
+    font-size: 15px; 
+}
+
+
+.b-list {
+    display: block;
+
+    &__li {
+        font-size: 10px;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-height: 0;
+        margin-bottom: 15px;
+        transition: transform .2s; /* Animation */
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    &__img {
+        object-fit: contain;
+        width: auto;
+        height: 100%;
+    }
+}
+
+
+
+.b-filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 0 20px 0;
+    margin: 0 25px;
+}
+
+.b-flex {
+    display: flex;
+    gap: 20px;
+}
+
+.b-searchBar {
+    height: 56px;
+    border: none;
+    background-color: rgb(247, 247, 247);
+    box-shadow: rgba(77, 77, 82, 0.2) 0px 7px 29px 0px;
+    padding: 0px 10px;
+    font-size: 15px;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+        background-color: rgb(233, 233, 233);
+        color: #000000;
+    }
+
+}
+

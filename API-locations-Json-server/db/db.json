@@ -1,0 +1,191 @@
+{
+  "locations": [
+    {
+      "id": 1,
+      "location_name": "Paris",
+      "country": "France",
+      "region": "Île-de-France",
+      "position": {
+        "lat": 48.8566,
+        "lng": 2.3522
+      },
+      "image": "https://content.r9cdn.net/rimg/dimg/bd/d1/2f268866-city-36014-162f82486f9.jpg"
+    },
+    {
+      "id": 6,
+      "location_name": "Prague",
+      "country": "Czech Republic",
+      "region": "Prague",
+      "position": {
+        "lat": 50.0755,
+        "lng": 14.4378
+      },
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4Lobo9qXiSHs0NEFTubOvDLW4gAxHtSBQAA&usqp=CAU"
+    },
+    {
+      "id": 8,
+      "location_name": "Athens",
+      "country": "Greece",
+      "region": "Attica",
+      "position": {
+        "lat": 37.9838,
+        "lng": 23.7275
+      },
+      "image": ""
+    },
+    {
+      "id": 10,
+      "location_name": "Stockholm",
+      "country": "Sweden",
+      "region": "Stockholm County",
+      "position": {
+        "lat": 59.3293,
+        "lng": 18.0686
+      },
+      "image": ""
+    },
+    {
+      "id": 15,
+      "image": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAZose0k1xcqmfyeJ2MXy71i5zIEb2daZSk5wpioukrSZ4LVjUxxsQH255ZXxmAt1CQR9WhOSv1V17zWze-G5LYQ5X9vpZA70w8VwZhfrtn5sGwvbEm7KscihPevNLU99eFwCi5bKVy4UDC4he-9xUYEWBrEicdO07jhLxdqmOMzlUDnaEJ9W&3u4000&5m1&2e1&callback=none&key=AIzaSyDMu8iVTH1eiLcWC7tY2c-OiP9TEv0Sd4k&token=90025",
+      "location_name": "Barañáin",
+      "region": "Navarre",
+      "country": "Spain",
+      "position": {
+        "lat": 42.8041023,
+        "lng": -1.6846077
+      }
+    },
+    {
+      "id": 16,
+      "image": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAZose0l52xNXJdGzmqvOQTpVypzv52r9P3KPXxXsSiASQbExk0xwtrjfpuWNDuiSlw6xve5go5rwLyUbCrHH3DctQZofRNSV8AD1WsU-wIQwfZbTq2WldXNBBOPRlY4EAJiZY2N_899cW0VNuaz3KR26M5JtI3MpTfCQBcYVs4hwihE2fpKf&3u4896&5m1&2e1&callback=none&key=AIzaSyDMu8iVTH1eiLcWC7tY2c-OiP9TEv0Sd4k&token=78378",
+      "location_name": "Barcelona",
+      "region": "Barcelona",
+      "country": "Spain",
+      "position": {
+        "lat": 41.3873974,
+        "lng": 2.168568
+      }
+    },
+    {
+      "id": 17,
+      "image": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAZose0mzDEJLe2l0Qaky-N3ldg8E4KlwqIjCTvwHXBjBd-y3q6v-gzLIzuV9iFb3c8yXfOJ9qnJC_onsnb-_s-eUFqJdstl5ixk4xExUGhgJ7oDhVk-ZspLcUnOUU3s82lttbOidJpyw6hnFOYnTIwoimPgP-Vo-xyG8IW7lh27cirSgduet&3u1080&5m1&2e1&callback=none&key=AIzaSyDMu8iVTH1eiLcWC7tY2c-OiP9TEv0Sd4k&token=59205",
+      "location_name": "Frankfurt",
+      "region": "Darmstadt",
+      "country": "Germany",
+      "position": {
+        "lat": 50.1109221,
+        "lng": 8.6821267
+      }
+    },
+    {
+      "id": 18,
+      "image": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAZose0kF7_z2d_67Z1o2u9fWoFkqykFCdqd6WrMMpbdP5CtkygUAqAddtZhiweSRvU927XTjhU_gzDiQhpfsxhb1IHalEF4LmzzECk0MYNrX8AW05VgzWGI39EH7GRE4Dosph-_cdVspBzWPelGdUYmx18Qh2QZKJ52O1xdqvy-At86COny7&3u900&5m1&2e1&callback=none&key=AIzaSyDMu8iVTH1eiLcWC7tY2c-OiP9TEv0Sd4k&token=115849",
+      "location_name": "Vienna",
+      "region": "Vienna",
+      "country": "Austria",
+      "position": {
+        "lat": 48.2081743,
+        "lng": 16.3738189
+      }
+    },
+    {
+      "id": 20,
+      "image": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAZose0kS850jDC7m4hJe-viHK05izc7cO6cMERenOVNzAleYvt82gat5c3o3APIP_b02t0_nXpopmLx5gg3GcYqyI6YadB0U4RyNJN-y6iAIDv2241EwGLJQjDW-m5zit0t7YPIFYxFesHjSeJ0fGV2YEtwj1dZpD9orN96xrdcJcsirgzsD&3u1079&5m1&2e1&callback=none&key=AIzaSyDMu8iVTH1eiLcWC7tY2c-OiP9TEv0Sd4k&token=121934",
+      "location_name": "Berlin",
+      "region": "Kreisfreie Stadt Berlin",
+      "country": "Germany",
+      "position": {
+        "lat": 52.52000659999999,
+        "lng": 13.404954
+      }
+    },
+    {
+      "id": 21,
+      "image": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAZose0mf6TaSxwdvzxKIBRiYRM0VOXl76nUZP31n-yl9y5Ut5-lf8iD0B8Eziu0AyVRVh4SFFlNmmJJrQUZeMGmN007s6w9AedGETyGjj-Ij8Y2cNlC6DTkXocB0uIulRl0euq48caQBqSsTqw6YY2Vlh5YkxpzVmxY0Ueh7ycaeg3CJm1pR&3u7728&5m1&2e1&callback=none&key=AIzaSyDMu8iVTH1eiLcWC7tY2c-OiP9TEv0Sd4k&token=41370",
+      "location_name": "Rome",
+      "region": "Rome",
+      "country": "Lazio",
+      "position": {
+        "lat": 41.9027835,
+        "lng": 12.4963655
+      }
+    },
+    {
+      "id": 22,
+      "image": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAZose0lEtJ_lBso7S6hhL04CAuj7Twd781VcnHj9qWF7ilKugbmyelkE9FaRvdnKzGC7IIdhCh4Er5COTRUiAMEyQP_8u_AL65d7hm_9LgQfYrC9hShtIZwW1BeZyczMu9_zb9bQEMxxnzflTQk80UxChuS9sgxGW14n3YZC85Nc1-q4DM_9&3u4000&5m1&2e1&callback=none&key=AIzaSyDMu8iVTH1eiLcWC7tY2c-OiP9TEv0Sd4k&token=21471",
+      "location_name": "Lugano",
+      "region": "Lugano District",
+      "country": "Switzerland",
+      "position": {
+        "lat": 46.0036778,
+        "lng": 8.951051999999999
+      }
+    },
+    {
+      "id": 23,
+      "image": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAZose0mgy5DcsM9JemhaprtEJ6zDZgK7QVAucbXGJ94lxdTDZKA3XEjq1Ak2r-usYey-Nq2nDNJ9MJxjKpAz7N63k1ghxadPRXmJgBRYZz3bvGMFP-MCSg7ELByjxpkWWL5QavsmUPTMBKqXLFEOH6Yn7nlJAephKaiKitdReDnjsEWuPaXk&3u4032&5m1&2e1&callback=none&key=AIzaSyDMu8iVTH1eiLcWC7tY2c-OiP9TEv0Sd4k&token=111477",
+      "location_name": "Dublin",
+      "region": "County Dublin",
+      "country": "Ireland",
+      "position": {
+        "lat": 53.3498053,
+        "lng": -6.2603097
+      }
+    },
+    {
+      "id": 27,
+      "image": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAZose0ljxABGKWyMPl_oJUBn8n7Ijc0u6KDv4IcOwRZQJNpLYnFZT_9SLcmfGM6Qh1188tG5huUuZXa2p8BIe7aJoQNaZ95y3HChrXykLCQQ2jL53J0XELbjGzvE-SZqvvbCJ8DNsjF3O8U4JwH1aHLIySbvimnCUz1ykreYjHw3-yyuxaQ8&3u640&5m1&2e1&callback=none&key=AIzaSyDMu8iVTH1eiLcWC7tY2c-OiP9TEv0Sd4k&token=98671",
+      "location_name": "Lyon",
+      "region": "Rhône",
+      "country": "France",
+      "position": {
+        "lat": 45.764043,
+        "lng": 4.835659
+      }
+    },
+    {
+      "id": 28,
+      "image": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAZose0nvSsA_DDKTwXsxmVgsIC_sqTevHKzkpr3po6u3iHEx6MP_KJAHVpEUtT6V9gI4fGgQME9hKSzXwhehatD_jikaoyePPGRN0Bgq6vIFCB3TuQLj_eTArSFzz5KUTFdyWjbeJvzWqtlsVuiLWXRCp_1REV4UZVDMu7FOAkzW-BwrMs3e&3u1080&5m1&2e1&callback=none&key=AIzaSyDMu8iVTH1eiLcWC7tY2c-OiP9TEv0Sd4k&token=56594",
+      "location_name": "Madrid",
+      "region": "Madrid",
+      "country": "Spain",
+      "position": {
+        "lat": 40.4167754,
+        "lng": -3.7037902
+      }
+    },
+    {
+      "id": 29,
+      "image": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAZose0mMjU45U8OJg5XBtLnRghRCKN2tdd6Kjh-FxlQSOdGh0qb_DdSrNnzq8SUJ7qCqrDOZmxQ6gWSdsXfjKW1rRBw281Nfhg59Dwq6zKcQ7CO9zvzQR5T-l6SkKrP1Qxy8lQfZwbxnFh-qzfHGfDpONYRUvPe9AuPBn1cpF37gV8JppyZq&3u1170&5m1&2e1&callback=none&key=AIzaSyDMu8iVTH1eiLcWC7tY2c-OiP9TEv0Sd4k&token=48912",
+      "location_name": "Zürich",
+      "region": "Zürich District",
+      "country": "Switzerland",
+      "position": {
+        "lat": 47.3768866,
+        "lng": 8.541694
+      }
+    },
+    {
+      "id": 30,
+      "image": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAZose0nweqFEwnOtSdtrVL4Dc3CMFT5c-0Ui7tUvCWl2GPEkb3mO0glQp05kmCgyQUo5xMH2vGLbj68JT14azVPW09T6tBH6HBHJMZt1uCoi_yBLxwF268i3yL2gjaYZvBn4Cz9qCjfoVuficI4t6SV-i0ZElHJEx3rB_tJ18SZnLGB0xjo4&3u4000&5m1&2e1&callback=none&key=AIzaSyDMu8iVTH1eiLcWC7tY2c-OiP9TEv0Sd4k&token=21979",
+      "location_name": "Chur",
+      "region": "Plessur District",
+      "country": "Switzerland",
+      "position": {
+        "lat": 46.8507835,
+        "lng": 9.5319859
+      }
+    },
+    {
+      "id": 31,
+      "image": "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAZose0nLQZI2aM_GOEtDWYyO1Tf_TSGFsKSVMEdxal9sYK3823xEy5hCFQgmFfoxrqweLEcVCLDbbuwREiNgCIj3oZQ67xnTQgebdvSuwy-xysFXbjDeBRR7eNfTrryLBpg72wjacRtq-vdCkIpcb5fA5f4S1nbumaADK8O69vXDwssLtlhR&3u4032&5m1&2e1&callback=none&key=AIzaSyDMu8iVTH1eiLcWC7tY2c-OiP9TEv0Sd4k&token=119459",
+      "location_name": "Budapest",
+      "region": "Hungary",
+      "country": "Hungary",
+      "position": {
+        "lat": 47.497912,
+        "lng": 19.040235
+      }
+    }
+  ]
+}

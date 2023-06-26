@@ -1,0 +1,16 @@
+
+<div class="b-new">
+
+    <input
+        id="autocomplete"
+        class="controls"
+        type="text"
+        placeholder="Search a place" />
+    <div class="b-map">
+        <google-map [width]="700" [height]="300">
+            <map-marker [position]="newPlace?.geometry.location"></map-marker>
+        </google-map>  
+    </div> 
+    <button (click)="submitGeoLoc()">Add</button>
+
+</div>

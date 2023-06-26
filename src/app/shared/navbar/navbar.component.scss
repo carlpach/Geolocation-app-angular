@@ -1,0 +1,21 @@
+nav {
+    background-color: rgb(223, 223, 223);
+
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 0;
+    font-size: 20px;
+    z-index: 2;
+}
+
+a {
+    color: rgb(42, 43, 37);
+    font-weight: 700;
+
+    &:hover {
+        color: rgb(122, 122, 122);
+    }
+}
